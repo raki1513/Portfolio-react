@@ -49,6 +49,59 @@ const Homepage = () => {
     "desc":"This is a basic Express back-end Server which Authenticates the User and Registers"
   },
 ]
+const AboutLG = ()=>{
+  return(
+    <div className="w-full flex">
+  <div className="w-[40%] flex items-center">
+    <img src={Rakesh1} alt="" className="w-[30vh] lg:w-[50vh] mx-4"/>
+  </div>
+  <div className="font-[Montserrat] w-[60%] lg:w-[60%] mt-4 mx-2 font-semibold text-[2.5vh] flex flex-col justify-center">
+    <h1>Hey guys I am Rakesh Ratnam.I am a CS undergraduate at Narasaraopeta Engineering college who is curious about exploring new technologies. I am starter who can work with little guidance and proper path way to learn new stuff. 
+      I can seamlessly work for hours and will try to ensure that I can deliver the best out of my potential.
+      </h1><br />
+      <h1>
+      Webstack: HTML,CSS,JS,React,React Native, ExpressJS
+      </h1>
+      <br />
+      <h1>
+Looking Forwad to contact me:
+Mail: rakeshratnam21@gmail.com
+      </h1>
+  </div>
+  <div>
+    <h1>
+
+    </h1>
+  </div>
+  </div>
+  )
+}
+const AboutSM = ()=>{
+  return(
+    <div className="w-full flex">
+  <div className="w-[40%] flex items-center">
+    <img src={Rakesh1} alt="" className="w-[30vh] lg:w-[50vh] mx-4"/>
+  </div>
+  <div className="font-[Montserrat] w-[60%] mt-4 mx-2 font-semibold text-[2vh] flex flex-col justify-center">
+    <h1>Hey guys I am Rakesh Ratnam.I am a CS undergraduate at Narasaraopeta Engineering college who is curious about exploring new technologies
+      </h1><br />
+      <h1>
+      Webstack: HTML,CSS,JS,React,React Native, ExpressJS
+      </h1>
+      <br />
+      <h1>
+Looking Forwad to contact me:
+Mail: rakeshratnam21@gmail.com
+      </h1>
+  </div>
+  <div>
+    <h1>
+
+    </h1>
+  </div>
+  </div>
+  )
+}
   return (
   <>
       {/* Main Section or Hero Section */}
@@ -102,31 +155,15 @@ const Homepage = () => {
     <div className="flex w-[40%]">
         <img src={Rakesh} alt="RakeshPhoto" className="w-[50vh] flex flex-end"  />
     </div>
-  </div>
-  </div>
-  {/* Introduction Secton  */}
-  <div className="w-full flex">
-  <div className="w-[40%] flex items-center">
-    <img src={Rakesh1} alt="" className="w-[30vh] lg:w-[50vh] mx-4"/>
-  </div>
-  <div className="font-[Montserrat] w-[60%] lg:w-[60%] mt-4 mx-2 font-semibold text-[2.5vh] flex flex-col justify-center">
-    <h1>Hey guys I am Rakesh Ratnam.I am a CS undergraduate at Narasaraopeta Engineering college who is curious about exploring new technologies. I am starter who can work with little guidance and proper path way to learn new stuff. 
-      I can seamlessly work for hours and will try to ensure that I can deliver the best out of my potential.
-      </h1><br />
-      <h1>
-      Webstack: HTML,CSS,JS,React,React Native, ExpressJS
-      </h1>
-      <br />
-      <h1>
-Looking Forwad to contact me:
-Mail: rakeshratnam21@gmail.com
-      </h1>
+    </div>
   </div>
   <div>
-    <h1>
-
-    </h1>
-  </div>
+      <div className="flex flex-col md:hidden lg:hidden">
+        <AboutSM/>
+      </div>
+      <div className="hidden md:flex lg:flex">
+        <AboutLG/>
+      </div>
   </div>
   <hr className="mx-7 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700"/>
   {/* Learning Section */}
@@ -145,8 +182,8 @@ Mail: rakeshratnam21@gmail.com
             whileTap={{ scale: 0.8 }} className="shadow-xl hover:shadow-2xl  lg:w-[35vh] hover:bg-blue-300 transition ease-in-out hover:shadow-cyan-400/50 h-[30vh] lg:h-[40vh] lg:px-2 lg:pt-1 rounded-lg">
         <img src={profile.image} alt="" className="w-[10vh] h-auto flex my-3 rounded-[200px]"/>
         <div>
-        <h1 className="font-bold lg:text-[3.2vh] text-black">{profile.name}</h1>
-        <h1 className="lg:text-[1.6vh] text-[1.5vh] text-black"><span className="font-bold text-[1.8vh] underline">Description :</span> {profile.desc}</h1>
+        <h1 className="font-bold text-[1.2vh] lg:text-[3.2vh] text-black">{profile.name}</h1>
+        <h1 className="lg:text-[1.6vh] text-[1vh] text-black"><span className="font-bold text-[1.8vh] underline">Description :</span> {profile.desc}</h1>
         </div>
 
         </motion.div>

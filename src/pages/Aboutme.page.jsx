@@ -54,7 +54,7 @@ const Aboutme = () => {
       "Link":"https://mail.google.com/mail/u/0/?fs=1&to=rakeshratnam21@gmail.com&tf=cm"
     },
     {
-      name: "X(Formerly Twitter)",
+      name: "X(Twitter)",
       path: X,
       "Link":"https://twitter.com/rakeshhhh21"
     },
@@ -260,6 +260,74 @@ const HobbiesSM=()=>{
       </>
     )
   }
+  const HandlesLG =()=>{
+    return(
+      <div
+        id="contactme"
+        className="font-[Montserrat] font-semibold bg-[#121212] text-white flex"
+      >
+        <div id="textandhandles" className="w-[80%] flex justify-center flex-col">
+          <div>
+          <h1>
+            You can get in Touch Wth by Using the Following Social Media Handles
+          </h1>
+          </div>
+
+          {/* Mapping a Array to Implement Cards  */}
+        <div className="grid mx-4 mt-4 gap-x-2 w-[40vh] lg:w-[90vh] grid-cols-2 lg:grid-cols-2 lg:grid-cols-2 font-[Montserrat] text-black lg:mx-4 lg:gap-6">
+          {Profiles.map((profile) => (
+            <>
+            <a href={profile.Link}>
+              <div className="shadow-2xl hover:shadow-2xl flex bg-white hover:bg-blue-300 mb-4 hover:text-black transition ease-in-out hover:shadow-cyan-400/50 h-[8vh] lg:h-[9vh] rounded-lg">
+                <div id="image" className="flex items-center justify-center mx-2 lg:mx-2">
+                  <img src={profile.path} alt="" className="md:hidden w-[8vh] lg:w-[7.5vh] rounded-lg " />
+                </div>
+                <div className="flex items-center mx-2 lg:mx-2">
+                  <h1 className="font-bold text-[3.2vh]">{profile.name}</h1>
+                </div>
+              </div>
+              </a>
+            </>
+          ))}
+        </div>
+        </div>
+        <div id="image" className="w-[40%]  flex justify-center items-center ">
+          <img src={ContactImage} alt="" className=" h-[50%]" />
+        </div>
+      </div>
+    )
+  }
+  const HandlesSM =()=>{
+    return(
+      <div
+        id="contactme"
+        className="font-[Montserrat] font-medium bg-[#121212] w-full text-white text-[1vh] flex"
+      >
+        <div id="textandhandles" className="w-[80%] text-xl flex justify-center flex-col">
+          <div>
+          <h1>
+            You can get in Touch Wth by Using the Following Social Media Handles
+          </h1>
+          </div>
+
+          {/* Mapping a Array to Implement Cards  */}
+        <div className="grid mx-4 mt-4 gap-x-2 w-[40vh] grid-cols-2  font-[Montserrat] text-black">
+          {Profiles.map((profile) => (
+            <>
+            <a href={profile.Link}>
+              <div className="shadow-2xl hover:shadow-2xl flex bg-white hover:bg-blue-300 mb-4 hover:text-black transition ease-in-out hover:shadow-cyan-400/50 h-[8vh] rounded-lg">
+                <div className="flex items-center mx-2">
+                  <h1 className="flex justify-center text-[3.2vh]">{profile.name}</h1>
+                </div>
+              </div>
+              </a>
+            </>
+          ))}
+        </div>
+        </div>
+      </div>
+    )
+  }
   return (
     <>
     <div className="Main-Section">
@@ -278,39 +346,14 @@ const HobbiesSM=()=>{
         <HobbiesLG/>
       </div>
     </div>
-      <div
-        id="contactme"
-        className="font-[Montserrat] font-semibold bg-[#121212] text-white flex"
-      >
-        <div id="textandhandles" className="w-[80%] flex justify-center flex-col">
-          <div>
-          <h1>
-            You can get in Touch Wth by Using the Following Social Media Handles
-          </h1>
-          </div>
-
-          {/* Mapping a Array to Implement Cards  */}
-        <div className="grid mx-4 mt-4 gap-x-2 lg:w-[90vh] grid-cols-2 lg:grid-cols-2 lg:grid-cols-2 font-[Montserrat] text-black lg:mx-4 lg:gap-6">
-          {Profiles.map((profile) => (
-            <>
-            <a href={profile.Link}>
-              <div className="shadow-2xl hover:shadow-2xl flex bg-white hover:bg-blue-300 mb-4 hover:text-black transition ease-in-out hover:shadow-cyan-400/50 h-[10vh] lg:h-[9vh] rounded-lg">
-                <div id="image" className="flex items-center justify-center mx-2 lg:mx-2">
-                  <img src={profile.path} alt="" className="w-[8vh] lg:w-[7.5vh] rounded-lg " />
-                </div>
-                <div className="flex items-center mx-2 lg:mx-2">
-                  <h1 className="font-bold text-[3.2vh]">{profile.name}</h1>
-                </div>
-              </div>
-              </a>
-            </>
-          ))}
-        </div>
-        </div>
-        <div id="image" className="w-[40%]  flex justify-center items-center ">
-          <img src={ContactImage} alt="" className=" h-[50%]" />
-        </div>
+    <div className="Handles-Section">
+      <div className="flex md:hidden lg:hidden">
+      <HandlesSM/>
       </div>
+      <div className="hidden md:flex lg:flex">
+        <HandlesLG/>
+      </div>
+    </div>
     </>
   );
 };

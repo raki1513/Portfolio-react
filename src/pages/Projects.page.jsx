@@ -67,22 +67,24 @@ const Projectspage = () => {
         },
           ]
   return (
-    <div className="flex px-2 h-auto mb-4 mt-4  font-semibold font-[Montserrat]">
+    <div className="flex px-2 h-auto mb-4 mt-4  lg:font-semibold font-[Montserrat]">
     <div className=" w-auto lg:w-[100%]">
       <div className='flex flex-col'>
       <h1 className='text-xl mb-6'>
-        I am a college student who is passionate about web development. I am always looking for ways to improve my skills and knowledge in this field. I have been taking online courses, reading books, and practicing my coding skills. I am also a member of a web development community where I can learn from other developers and get feedback on my work. I am excited about the future of web development and I am confident that I can make a difference in this field.
+        I am a college student who is passionate about web development. I am always looking for ways to improve my skills and knowledge in this field.
         </h1>
+        <br />
+        <h1 className='text-xl mb-6'>Following are my Projects</h1>
       <div  className="grid grid-cols-2 lg:grid-cols-3 font-[Montserrat] lg:mx-4 lg:gap-4">
       {profiles.map((profile) => (
         <>
         <a href={profile.Path}>
         <motion.div whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.8 }} className="shadow-xl hover:shadow-2xl w-[35vh] hover:bg-blue-300 transition ease-in-out hover:shadow-cyan-400/50 h-[40vh] px-2 pt-1 rounded-lg">
+            whileTap={{ scale: 0.8 }} className="shadow-xl hover:shadow-2xl w-[20vh] md:w-[35vh] lg:w-[35vh] hover:bg-blue-300 transition ease-in-out hover:shadow-cyan-400/50 h-[40vh] px-2 pt-1 rounded-lg">
         <img src={profile.image} alt="" className="w-[10vh] h-auto flex my-3 rounded-[200px]"/>
         <div>
-        <h1 className="font-bold text-[3.2vh] text-black">{profile.name}</h1>
-        <h1 className="text-[1.6vh] text-black"><span className="font-bold text-[1.8vh] underline">Description :</span> {profile.desc}</h1>
+        <h1 className="font-bold text-[2vh] lg:text-[3.2vh] text-black">{profile.name}</h1>
+        <h1 className="lg:text-[1.6vh] text-[1.8vh] text-black"><span className="font-bold text-[1.8vh] underline">Description :</span> {profile.desc}</h1>
         </div>
 
         </motion.div>

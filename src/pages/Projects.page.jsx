@@ -66,7 +66,7 @@ const Projectspage = () => {
           "desc":"This is the Portfolio that you are looking at right now which is built on ReactJS",
         },
           ]
-  return (
+  return(
     <div className="flex px-2 h-auto mb-4 mt-4  lg:font-semibold font-[Montserrat]">
     <div className=" w-auto lg:w-[100%]">
       <div className='flex flex-col'>
@@ -86,17 +86,17 @@ const Projectspage = () => {
         <h1 className="font-bold text-[2vh] lg:text-[3.2vh] text-black">{profile.name}</h1>
         <h1 className="lg:text-[1.6vh] text-[1.8vh] text-black"><span className="font-bold text-[1.8vh] underline">Description :</span> {profile.desc}</h1>
         </div>
-
+  
         </motion.div>
         </a>
         </>
-
+  
           ))}
           </div>
       </div>
-
+  
           </div>
-          </div>
+          </div> 
   )
 }
 

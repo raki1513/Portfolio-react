@@ -1,6 +1,6 @@
 import React from "react";
 import BaseHOC from "../layouts/BaseHOC";
-import Rakesh from "../assets/Snapchat-222511109.jpg";
+import Rakesh from "../assets/Rakesh.jpeg";
 import Gaming from "../assets/gaming.png";
 import Music from "../assets/sticker.png";
 import Globe from "../assets/globe.png";
@@ -97,7 +97,7 @@ const Aboutme = () => {
           id="imagepar"
           className="lg:w-[30%] lg:h-[50vh]  rounded-md flex items-center justify-center"
         >
-            <img src={Rakesh} alt="" className="h-[50vh] rounded-lg" />
+            <img src={Rakesh} alt="" className="h-[50vh] mb-[10vh] rounded-md" />
         </div>
       </div>
       </>
@@ -132,7 +132,7 @@ const Aboutme = () => {
           id="imagepar"
           className="lg:w-[30%] lg:h-[50vh] rounded-md flex items-center justify-center"
         >
-            <img src={Rakesh} alt="" className="mb-2 h-[50vh] rounded-lg" />
+            <img src={Rakesh} alt="" className="mb-10 h-[40vh] rounded-lg" />
         </div>
       </div>
       </>
@@ -242,7 +242,7 @@ const HobbiesSM=()=>{
           </ul>
         </div>
         {/* Mapping a Array to Implement Cards  */}
-        <div className="grid lg:grid-cols-2 gap-2 lg:grid-cols-2 font-[Montserrat] lg:mx-4 lg:gap-6">
+        <div className="grid lg:grid-cols-2 gap-2 lg:grid-cols-2 pt-4 font-[Montserrat] lg:mx-4 lg:gap-6">
           {Hobbies.map((profile) => (
             <>
               <div className="shadow-xl hover:shadow-2xl flex hover:bg-blue-300 mb-4 hover:text-black transition ease-in-out hover:shadow-cyan-400/50 h-[15vh] rounded-lg">

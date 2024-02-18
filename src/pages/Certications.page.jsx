@@ -71,8 +71,9 @@ const Certicationspage = () => {
     "path":VVIT7
 },
   ]
-  return (
-    <>
+  const CertificatesLG = ()=>{
+    return(
+      
       <div className='w-[100%] flex flex-col font-[Montserrat]'>
         <div className='flex items-center bg-[#121212] text-white'>
         <div id='reactimage' className='w-[45%]'>
@@ -137,7 +138,14 @@ const Certicationspage = () => {
 
         </div>
       </div>
-    </>
+    )
+  }
+  return (
+    <div>
+      <div className='hidden md:flex lg:flex'>
+        <CertificatesLG/>
+      </div>
+    </div>
   )
 }
 
